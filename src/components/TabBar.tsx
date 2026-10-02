@@ -1,11 +1,10 @@
-import { IconCart, IconPantry, IconToday } from './icons'
+import { IconCart, IconPin } from './icons'
 
-export type TabId = 'hoje' | 'compras' | 'despensa'
+export type TabId = 'mural' | 'compras'
 
 const TABS = [
-  { id: 'hoje', label: 'Hoje', Icon: IconToday },
+  { id: 'mural', label: 'Mural', Icon: IconPin },
   { id: 'compras', label: 'Compras', Icon: IconCart },
-  { id: 'despensa', label: 'Despensa', Icon: IconPantry },
 ] as const
 
 type Props = {
@@ -19,7 +18,7 @@ export function TabBar({ active, onChange }: Props) {
       aria-label="Seções"
       className="fixed inset-x-0 bottom-0 z-20 px-3 pb-[max(0.75rem,env(safe-area-inset-bottom))]"
     >
-      <div className="mx-auto flex max-w-md gap-1 rounded-3xl bg-surface p-2 shadow-bar">
+      <div className="mx-auto flex max-w-sm gap-1 rounded-3xl bg-surface p-2 shadow-bar">
         {TABS.map(({ id, label, Icon }) => {
           const selected = id === active
           return (

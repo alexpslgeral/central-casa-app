@@ -34,10 +34,45 @@
     cursor: pointer;
     -webkit-user-select: none;
     user-select: none;
+    -webkit-touch-callout: none;
   }
 
   :focus-visible {
     outline: 3px solid var(--color-brand);
     outline-offset: 3px;
+  }
+}
+
+/* Rendered rich text in notes and the note editor. */
+@layer components {
+  .rich ul {
+    list-style: disc;
+    padding-left: 1.5em;
+  }
+  .rich ol {
+    list-style: decimal;
+    padding-left: 1.6em;
+  }
+  .rich li {
+    margin: 0.15em 0;
+  }
+  .rich b,
+  .rich strong {
+    font-weight: 800;
+  }
+  /* Sizes from the editor's fontSize command, relative to the note text. */
+  .rich font[size='3'] {
+    font-size: 1em;
+  }
+  .rich font[size='5'] {
+    font-size: 1.4em;
+  }
+  .rich font[size='6'] {
+    font-size: 1.8em;
+  }
+  .rich:empty::before {
+    content: attr(data-placeholder);
+    color: var(--color-muted);
+    pointer-events: none;
   }
 }
