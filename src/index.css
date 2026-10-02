@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Nunito Variable", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  --color-canvas: #f2f4f8;
+  --color-surface: #ffffff;
+  --color-ink: #172033;
+  --color-muted: #566074;
+  --color-line: #dfe4ec;
+  --color-brand: #2563eb;
+  --color-brand-strong: #1d4ed8;
+  --color-brand-soft: #e6eefd;
+  --color-danger: #b91c1c;
+  --color-danger-soft: #fdecec;
+
+  --shadow-card: 0 1px 2px rgb(23 32 51 / 0.05), 0 6px 20px rgb(23 32 51 / 0.06);
+  --shadow-bar: 0 -2px 24px rgb(23 32 51 / 0.1);
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-canvas font-sans text-ink antialiased;
+    min-height: 100dvh;
+  }
+
+  button {
+    cursor: pointer;
+    -webkit-user-select: none;
+    user-select: none;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-brand);
+    outline-offset: 3px;
+  }
+}
