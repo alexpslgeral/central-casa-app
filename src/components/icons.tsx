@@ -160,3 +160,48 @@ export const IconListNumber = (props: IconProps) => (
     <path d="M3.8 14.3c.4-.6 1-.9 1.6-.9.9 0 1.5.6 1.5 1.3 0 1.4-3.1 2.2-3.1 4.3H7" strokeWidth={1.8} />
   </Svg>
 )
+
+export const IconContacts = (props: IconProps) => (
+  <Svg {...props}>
+    <rect x="4" y="3" width="15" height="18" rx="2" />
+    <circle cx="11.5" cy="10" r="2.6" />
+    <path d="M7.5 17c.6-2 2.1-3 4-3s3.4 1 4 3" />
+    <path d="M19 7h2M19 12h2M19 17h2" />
+  </Svg>
+)
+
+export const IconPhone = (props: IconProps) => (
+  <Svg {...props}>
+    <path d="M5 4h3.5l1.8 4.5-2.3 1.4a11 11 0 0 0 6.1 6.1l1.4-2.3L20 15.5V19a1.5 1.5 0 0 1-1.5 1.5A15.5 15.5 0 0 1 3.5 5.5 1.5 1.5 0 0 1 5 4z" />
+  </Svg>
+)
+
+export const IconGlobe = (props: IconProps) => (
+  <Svg {...props}>
+    <circle cx="12" cy="12" r="9" />
+    <path d="M3 12h18" />
+    <path d="M12 3c2.5 2.6 3.7 5.6 3.7 9s-1.2 6.4-3.7 9c-2.5-2.6-3.7-5.6-3.7-9S9.5 5.6 12 3z" />
+  </Svg>
+)
+
+export const IconWhatsapp = (props: IconProps) => (
+  <Svg {...props}>
+    <path d="M4 20.5 5.3 16.6A8.5 8.5 0 1 1 8.6 19.6z" />
+    <path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.6-2-1-1 .9a5 5 0 0 1-2.3-2.3l.9-1-1-2z" strokeWidth={1.6} />
+  </Svg>
+)
+
+export const IconInstagram = (props: IconProps) => (
+  <Svg {...props}>
+    <rect x="3.5" y="3.5" width="17" height="17" rx="5" />
+    <circle cx="12" cy="12" r="4" />
+    <path d="M17 7v.01" strokeWidth={3} />
+  </Svg>
+)
+
+export const IconSearch = (props: IconProps) => (
+  <Svg {...props}>
+    <circle cx="11" cy="11" r="6.5" />
+    <path d="m16 16 4.5 4.5" />
+  </Svg>
+)

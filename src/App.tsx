@@ -6,6 +6,7 @@ import { useAuthUser } from './lib/auth'
 import { useDeviceRole } from './lib/device'
 import { isFirebaseConfigured } from './lib/firebase'
 import { useMembers } from './lib/members'
+import { useContacts } from './lib/contacts'
 import { useNotes } from './lib/notes'
 import { useItems, useLists } from './lib/shopping'
 import { useToday } from './lib/useToday'
@@ -14,6 +15,7 @@ import { LoginScreen } from './screens/LoginScreen'
 import { MessageScreen } from './screens/MessageScreen'
 import { WhoAreYouScreen } from './screens/WhoAreYouScreen'
 import { ComprasTab } from './tabs/ComprasTab'
+import { ContatosTab } from './tabs/ContatosTab'
 import { MuralTab } from './tabs/MuralTab'
 
 export default function App() {
@@ -44,6 +46,7 @@ function SignedInApp() {
   const lists = useLists()
   const items = useItems()
   const notes = useNotes()
+  const contacts = useContacts()
 
   if (errorCode) {
     return errorCode === 'permission-denied' ? (
@@ -98,6 +101,7 @@ function SignedInApp() {
               memberId={memberId}
             />
           )}
+          {tab === 'contatos' && <ContatosTab contacts={contacts} memberId={memberId} />}
         </main>
         <TabBar active={tab} onChange={setTab} />
       </div>
